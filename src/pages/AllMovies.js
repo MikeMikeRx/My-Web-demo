@@ -8,7 +8,6 @@ const AllMovies = () => {
 
   useEffect( () =>{
     projectFirestore.collection("movies").get().then( (snapshot) =>{
-      console.log(snapshot.docs)
 
       if (snapshot.empty){
         setError("No movies found")

@@ -1,3 +1,4 @@
+import "./AllMovies.css"
 import { projectFirestore } from "../firebase/config"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
@@ -36,7 +37,7 @@ const AllMovies = () => {
     {data.map( (oneMovie) => {
       const {id, title} = oneMovie
 
-      return <div key={id}>
+      return <div key={id} className="one-movie">
         <p>{title}</p>
         <Link to={`/one-movie/${id}`}>more</Link>
         <button onClick={ () => deleteMovie(id) }>Remove</button>

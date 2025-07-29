@@ -1,3 +1,4 @@
+import "./Form.css"
 import { useState } from "react"
 import { projectFirestore } from "../firebase/config"
 
@@ -26,23 +27,29 @@ const Form = () => {
 
   }
 
-  return <section>
+  return <section className="form-section">
+    <h1>Your Movie</h1>
     <form onSubmit={submitForm}>
-      <input 
+      <input
+      className="input" 
       type="text" 
       placeholder="Movie Name"
       onChange={ (e) => setMovieTitle(e.target.value) }
       value={movieTitle}
       />
 
-      <input type="number"
+      <input
+      className="input"  
+      type="number"
       placeholder="Minimum age"
       min="1"
       onChange={ (e) => setMovieAge(e.target.value) }
       value={movieAge}       
       />
 
-      <input type="number"
+      <input 
+      className="input" 
+      type="number"
       placeholder="Movie duration"
       min="1"
       onChange={ (e) => setMovieTime(e.target.value) }

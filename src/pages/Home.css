@@ -1,0 +1,15 @@
+.home {
+    height: 90vh;
+    text-align: center;
+}
+
+h1 {
+    color: #D90404;
+    font-size: 45px;
+}
+
+p{
+    color: #0D0D0D;
+    font-weight: bold;
+    margin: 50px 0px;
+}

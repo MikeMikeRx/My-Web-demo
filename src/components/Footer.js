@@ -1,7 +1,7 @@
 import "./Footer.css"
 
 const Footer = () => {
-  return <footer>
+  return <footer className="footer">
     <p>Footer</p>
   </footer>
 }

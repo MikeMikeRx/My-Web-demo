@@ -6,7 +6,7 @@ const Form = () => {
   const [movieAge, setMovieAge] = useState(null)
   const [movieTime, setMovieTime] = useState(null)
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault()
 
     const newMovie = {
@@ -16,7 +16,7 @@ const Form = () => {
     }
 
     try {
-      projectFirestore.collection("movies").add(newMovie)
+      await projectFirestore.collection("movies").add(newMovie)
       setMovieTitle("")
       setMovieAge(null)
       setMovieTime(null)

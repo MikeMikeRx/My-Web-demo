@@ -7,7 +7,7 @@ const AllMovies = () => {
   const [error, setError] = useState("")
 
   useEffect( () =>{
-    projectFirestore.collection("movies").get().then( (snapshot) =>{
+    projectFirestore.collection("movies").onSnapshot( (snapshot) =>{
 
       if (snapshot.empty){
         setError("No movies found")
@@ -19,12 +19,10 @@ const AllMovies = () => {
         setData(result)        
       }
       
-    }).catch ( (err) => {
-      setError(err.message)
-    } )
-
+    }, (err) => setError(err.message))
   },[])
 
+  
   const deleteMovie = (id) => {
     projectFirestore.collection("movies").doc(id).delete()
   }

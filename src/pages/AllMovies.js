@@ -20,7 +20,10 @@ const AllMovies = () => {
         setData(result)        
       }
       
-    })
+    }).catch ( (err) => {
+      setError(err.message)
+    } )
+    
   },[])
 
 

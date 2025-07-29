@@ -7,7 +7,7 @@ const AllMovies = () => {
   const [error, setError] = useState("")
 
   useEffect( () =>{
-    projectFirestore.collection("movies").onSnapshot( (snapshot) =>{
+    const unsubscribe = projectFirestore.collection("movies").onSnapshot( (snapshot) =>{
 
       if (snapshot.empty){
         setError("No movies found")
@@ -20,7 +20,11 @@ const AllMovies = () => {
       }
       
     }, (err) => setError(err.message))
+
+    return () => unsubscribe()
   },[])
+
+
 
   
   const deleteMovie = (id) => {

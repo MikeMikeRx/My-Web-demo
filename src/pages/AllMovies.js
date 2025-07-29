@@ -23,13 +23,21 @@ const AllMovies = () => {
     }).catch ( (err) => {
       setError(err.message)
     } )
-    
+
   },[])
 
 
 
   return <section>
     {error && <p>{error}</p>}
+    {data.map( (oneMovie) => {
+      const {id, title, minage, time} = oneMovie
+
+      return <div key={id}>
+        <p>{title}</p>
+        <Link to={`/one-movie/${id}`}>more</Link>
+      </div>
+    } )}
   </section>
 }
 

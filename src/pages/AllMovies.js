@@ -30,7 +30,7 @@ const AllMovies = () => {
   return <section>
     {error && <p>{error}</p>}
     {data.map( (oneMovie) => {
-      const {id, title, minage, time} = oneMovie
+      const {id, title} = oneMovie
 
       return <div key={id}>
         <p>{title}</p>

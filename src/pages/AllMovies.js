@@ -25,7 +25,9 @@ const AllMovies = () => {
 
   },[])
 
-
+  const deleteMovie = (id) => {
+    projectFirestore.collection("movies").doc(id).delete()
+  }
 
   return <section>
     {error && <p>{error}</p>}
@@ -35,6 +37,7 @@ const AllMovies = () => {
       return <div key={id}>
         <p>{title}</p>
         <Link to={`/one-movie/${id}`}>more</Link>
+        <button onClick={ () => deleteMovie(id) }>Remove</button>
       </div>
     } )}
   </section>

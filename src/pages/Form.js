@@ -13,6 +13,14 @@ const Form = () => {
     console.log(movieAge)
     console.log(movieTime)
 
+    const newMovie = {
+      title: movieTitle, 
+      minage: movieAge, 
+      time: movieTime
+    }
+
+    projectFirestore.collection("movies").add(newMovie)
+
   }
 
   return <section>

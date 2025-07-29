@@ -11,15 +11,15 @@ const Form = () => {
 
     const newMovie = {
       title: movieTitle, 
-      minage: movieAge, 
-      time: movieTime
+      minage: parseInt(movieAge), 
+      time: parseInt(movieTime)
     }
 
     try {
       await projectFirestore.collection("movies").add(newMovie)
       setMovieTitle("")
-      setMovieAge(null)
-      setMovieTime(null)
+      setMovieAge("")
+      setMovieTime("")
     } catch (err) {
       console.log(err.message)      
     }

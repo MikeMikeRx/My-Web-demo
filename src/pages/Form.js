@@ -36,7 +36,7 @@ const Form = () => {
       />
 
       <input type="number"
-      placeholder="Minimal age"
+      placeholder="Minimum age"
       min="1"
       onChange={ (e) => setMovieAge(e.target.value) }
       value={movieAge}       

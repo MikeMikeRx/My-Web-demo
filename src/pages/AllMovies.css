@@ -1,34 +1,29 @@
 .one-movie {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    border: 5px solid #0D0D0D;
-    color: #F2F2F2;
-    background-color: #b9b9b9;
     justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e50914;
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px 10px;
+
+    width: 500px;
+    margin: 25px auto;
 }
 
-.one-movie p {
-    width: 250px;
-    font-size: 35px;    
-}
 
 .one-movie a {
-    font-size: 12px;
     text-decoration: none;
-    background-color: #0D0D0D;
-    color: #F2F2F2;
-    border: none;
-    padding: 5px 10px;
+    color: #b92930;
 }
 
+
 .one-movie button {
-    font-size: 12px;
-    background-color: #590A0A;
-    color: #F2F2F2;
+    font-size: 14px;
+    background-color: #e50914;
+    color: #e5e5e5;
     border: none;
     padding: 5px 10px;
+    cursor: pointer;
 }

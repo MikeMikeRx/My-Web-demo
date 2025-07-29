@@ -2,16 +2,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 2px solid red;
+    border: 5px solid #0D0D0D;
+    color: #F2F2F2;
+    background-color: #b9b9b9;
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
-    margin: 20px 10px;
+    margin: 10px 10px;
+}
+
+.one-movie p {
+    width: 250px;
+    font-size: 35px;    
 }
 
 .one-movie a {
+    font-size: 12px;
     text-decoration: none;
-    color: #590A0A;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+    border: none;
+    padding: 5px 10px;
 }
 
 .one-movie button {

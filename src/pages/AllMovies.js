@@ -39,7 +39,7 @@ const AllMovies = () => {
 
       return <div key={id} className="one-movie">
         <p>{title}</p>
-        <Link to={`/one-movie/${id}`}>more</Link>
+        <Link to={`/one-movie/${id}`}>About the movie</Link>
         <button onClick={ () => deleteMovie(id) }>Remove</button>
       </div>
     } )}

@@ -1,5 +1,5 @@
 import "./OneMovie.css"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { projectFirestore } from "../firebase/config"
 import { useState, useEffect} from "react"
 
@@ -33,6 +33,7 @@ const OneMovie = () => {
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, distinctio blanditiis reiciendis fugiat sed omnis minus animi voluptate earum numquam magnam, aspernatur enim at nesciunt asperiores fuga ut ipsum officiis.</p>
       <p>{data.time} min </p>
       <p>{data.minage} + </p>
+      <Link exact to="/all-movies">Back to Movies</Link>
 
     </section>
   )

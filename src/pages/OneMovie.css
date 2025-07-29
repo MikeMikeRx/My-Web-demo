@@ -3,3 +3,12 @@
     margin-bottom: 50px;
     height: 85vh;
 }
+
+.one-movie-section a {
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+    border: none;
+    padding: 5px 10px;
+}

@@ -9,17 +9,20 @@ const Form = () => {
   const submitForm = (e) => {
     e.preventDefault()
 
-    console.log(movieTitle)
-    console.log(movieAge)
-    console.log(movieTime)
-
     const newMovie = {
       title: movieTitle, 
       minage: movieAge, 
       time: movieTime
     }
 
-    projectFirestore.collection("movies").add(newMovie)
+    try {
+      projectFirestore.collection("movies").add(newMovie)
+      setMovieTitle("")
+      setMovieAge(null)
+      setMovieTime(null)
+    } catch (err) {
+      console.log(err.message)      
+    }
 
   }
 
@@ -29,18 +32,21 @@ const Form = () => {
       type="text" 
       placeholder="Title"
       onChange={ (e) => setMovieTitle(e.target.value) }
+      value={movieTitle}
       />
 
       <input type="number"
       placeholder="Minimal age"
       min="1"
-      onChange={ (e) => setMovieAge(e.target.value) }       
+      onChange={ (e) => setMovieAge(e.target.value) }
+      value={movieAge}       
       />
 
       <input type="number"
       placeholder="Movie duration"
-      onChange={ (e) => setMovieTime(e.target.value) }
       min="1"
+      onChange={ (e) => setMovieTime(e.target.value) }
+      value={movieTime}      
       />
 
       <input type="submit"

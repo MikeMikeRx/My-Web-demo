@@ -3,7 +3,7 @@ import { projectFirestore } from "../firebase/config"
 import { useState, useEffect} from "react"
 
 const OneMovie = () => {
-  const [data,setData] = useState([])
+  const [data,setData] = useState({})
   const [error, setError] = useState(false)
 
   const { movieId } = useParams()
@@ -26,7 +26,12 @@ const OneMovie = () => {
    
 
   return (
-    <div>{ movieId }</div>
+    <section>
+      <h1>{data.title}</h1>
+      <p>{data.time} min </p>
+      <p>{data.minage} + </p>
+
+    </section>
   )
 }
 

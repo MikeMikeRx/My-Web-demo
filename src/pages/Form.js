@@ -30,7 +30,7 @@ const Form = () => {
     <form onSubmit={submitForm}>
       <input 
       type="text" 
-      placeholder="Title"
+      placeholder="Movie Name"
       onChange={ (e) => setMovieTitle(e.target.value) }
       value={movieTitle}
       />
